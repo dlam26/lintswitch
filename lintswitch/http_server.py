@@ -55,7 +55,7 @@ class HTTPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             while True:
                 if SHARED_RESULT:
                     try:
-                        self.wfile.write('data: {}\n\n'
+                        self.wfile.write('data: {0}\n\n'
                                          .format(SHARED_RESULT.encode('utf8')))
                         self.wfile.flush()
                     except socket.error:
